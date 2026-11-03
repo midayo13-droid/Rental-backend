@@ -23,7 +23,9 @@
 
 ## Render에 올리기
 
-1. Render 대시보드 → **New → Web Service** → 이 저장소(`Rental-backend`) 연결. (또는 `render.yaml` 로 Blueprint 생성)
+**가장 쉬운 방법 (Blueprint):** Render 대시보드 → **Blueprints → New Blueprint Instance** → 이 저장소(`Rental-backend`) 선택 → 설정이 `render.yaml` 에서 자동으로 채워지고, **`DATABASE_URL` 한 칸만** 붙여 넣으면 됩니다. 이후 `CORS_ORIGIN` 을 Vercel 주소로 바꿉니다. 아래 표는 같은 설정을 손으로 넣을 때의 값입니다.
+
+1. (손으로 만들 때) Render 대시보드 → **New → Web Service** → 이 저장소(`Rental-backend`) 연결.
 2. 아래 값을 넣습니다.
 
 | 항목 | 값 |

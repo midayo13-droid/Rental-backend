@@ -1,5 +1,5 @@
-# Render Blueprint — 이 파일로 백엔드 웹 서비스를 한 번에 만들 수 있어요. (New → Blueprint)
-# sync: false 인 값은 Render 화면에서 직접 입력해요. (비밀 값은 GitHub 에 올리지 않아요)
+# Render Blueprint — 이 파일로 백엔드 웹 서비스를 한 번에 만들 수 있어요. (Blueprints → New Blueprint Instance)
+# Render 가 물어보는 값은 DATABASE_URL 하나뿐이에요. (비밀 값은 GitHub 에 올리지 않아요)
 services:
   - type: web
     name: rental-backend
@@ -17,12 +17,10 @@ services:
       - key: JWT_SECRET
         generateValue: true  # Render 가 긴 임의 글자를 만들어 줘요
       - key: DATABASE_URL
-        sync: false          # Render PostgreSQL 의 Internal(또는 External) Database URL
+        sync: false          # ← 배포할 때 직접 붙여 넣어요 (Render PostgreSQL 의 Internal Database URL)
       - key: CORS_ORIGIN
-        sync: false          # 예: https://rental-web.vercel.app,https://rental-admin.vercel.app
-      - key: DIFY_API_URL
-        sync: false          # 예: https://api.dify.ai/v1 (비워도 됨)
-      - key: DIFY_API_KEY
-        sync: false          # app-... (비워도 됨)
+        # 임시 값이에요. Vercel 주소가 정해지면 Render 환경변수에서 두 화면 주소(쉼표로, 끝에 / 없이)로 바꿔 주세요.
+        value: http://localhost:3000,http://localhost:3001
       - key: DEMO_RESET_ENABLED
         value: "true"
+      # 챗봇(Dify)은 나중에 Render 환경변수에 DIFY_API_URL, DIFY_API_KEY 를 추가하면 켜져요. (없으면 "아직 연결되지 않았어요")
