@@ -12,6 +12,18 @@
 
 ---
 
+## 배포 주소 (확인용)
+
+| 구분 | 주소 |
+|---|---|
+| 코어 웹(임직원용) | https://rental-web-one-puce.vercel.app |
+| 어드민(총무팀용) | https://rental-admin-nine.vercel.app |
+| 백엔드(서버) | https://rental-backend-r63r.onrender.com  (확인: `/health`) |
+
+> 서버가 무료 플랜이라 **첫 접속은 30초~1분 걸릴 수 있어요.** 로그인 계정은 아래 "확인용 계정(가상)"을 쓰세요.
+
+---
+
 ## 기술
 
 | 항목 | 내용 |
