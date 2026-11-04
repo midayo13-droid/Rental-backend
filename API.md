@@ -67,5 +67,5 @@ JSON 키는 camelCase.
 ## 가상 데이터 (관리자만)
 - POST `/admin/reset-demo` → 활동 데이터(예약·운행·동승자·주유·사고·점검·정산)를 지우고 처음 가상 데이터로 다시 채움. 계정·직원 명부·차량·부서는 유지. `DEMO_RESET_ENABLED=false` 이면 403.
 
-## 규정 챗봇
+## 누리 안내봇
 - GET `/chat/status` → {connected} / POST `/chat` {message,conversationId?} → {answer,conversationId} (연결 전이면 503 + 쉬운 message)

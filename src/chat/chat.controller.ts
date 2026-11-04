@@ -1,7 +1,7 @@
 import { Body, Controller, Get, HttpException, Post, Req } from '@nestjs/common';
 import { bad } from '../common/http.js';
 
-/** 규정 챗봇 — 질문을 Dify 로 전달해요. 키는 서버에만 있고, 질문·답은 저장하지 않아요. [챗-1]~[챗-6] */
+/** 누리 안내봇 — 질문을 Dify 로 전달해요. 키는 서버에만 있고, 질문·답은 저장하지 않아요. [챗-1]~[챗-6] */
 @Controller('chat')
 export class ChatController {
   private get connected() {
@@ -20,7 +20,7 @@ export class ChatController {
     if (message.length > 500) throw bad('질문은 500자 이내로 적어 주세요.');
     if (!this.connected) {
       throw new HttpException(
-        { statusCode: 503, message: '규정 챗봇이 아직 연결되지 않았어요. 규정 문서를 확인하거나 총무팀에 문의해 주세요.' },
+        { statusCode: 503, message: '누리 안내봇이 아직 연결되지 않았어요. 규정 문서를 확인하거나 총무팀에 문의해 주세요.' },
         503,
       );
     }

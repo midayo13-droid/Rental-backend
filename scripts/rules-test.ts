@@ -284,7 +284,7 @@ async function main() {
   check('관리자가 자기 계정을 정지할 수는 없음', r.status === 403, `${r.status}`);
 
   // ---------- 챗봇 ----------
-  section('규정 챗봇');
+  section('누리 안내봇');
   r = await call('GET', '/chat/status', nuri.token);
   check('챗봇 연결 상태 조회', r.status === 200 && typeof r.body.connected === 'boolean');
   if (!r.body.connected) {
