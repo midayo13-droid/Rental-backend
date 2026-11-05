@@ -100,14 +100,6 @@ npm run test:extra   # 보안·안전장치 36개 (위조 출입증, SQL 주입,
 
 두 테스트는 `hw2` 안의 데이터만 지우고 다시 채웁니다. 1주차 `public` 테이블은 건드리지 않습니다.
 
-## 확인용 계정 (가상)
-
-| 역할 | 이메일 | 비밀번호 |
-|---|---|---|
-| 관리자 | admin@nuri.test | Admin#2026 |
-| 일반 직원 | staff1@nuri.test | Staff#2026 |
-| 고객(임직원) | customer01@nuri.test | Customer#2026 |
-
 ## 폴더
 
 ```
